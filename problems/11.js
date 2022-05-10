@@ -8,7 +8,15 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let dif = str.length/2;
+    dif = Math.floor(dif)
+    str = str.toLowerCase()
+    for (let i = 0; i<dif;i++){
+        if (str[i] != str[-i-1]){
+            return false;
+        }
+    }
+    return true;
 }
 
 const tests = [

@@ -9,7 +9,21 @@
  * @example 92 -> "A", 75 -> "B"
 */
 function problem(percentage) {
-    return null;
+    let counter = 1;
+    while(percentage > 68) {
+        if (percentage > tests[counter][0])
+        {
+            return tests[counter-1][1];
+        } 
+        else if (percentage == tests[counter][0])
+        {
+            return tests[counter][1];
+        }
+        else {
+            counter += 1;
+        }
+    }; 
+    return 'F'
 }
 
 const tests= [

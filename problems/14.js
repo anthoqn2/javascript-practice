@@ -7,8 +7,21 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
-}
+    let count = {}
+    for (let i =0; i<numbers.length; i++){
+        if (numbers[i] in count)
+        {
+            count[numbers[i]] += 1;
+        }
+        else{
+            count[numbers[i]] = 1;
+        }
+    
+    }
+   return Object.keys(count).reduce(function(a,b){
+       return count[a] > count[b] });
+   } 
+
 
 const tests = [
     [[3,2,3], 3],
